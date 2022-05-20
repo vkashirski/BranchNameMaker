@@ -1,0 +1,11 @@
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\bin\Debug\BranchMaker.exe.config
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\bin\Debug\BranchMaker.exe
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\bin\Debug\BranchMaker.pdb
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\obj\Debug\BranchMaker.csproj.SuggestedBindingRedirects.cache
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\obj\Debug\BranchMaker.Form1.resources
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\obj\Debug\BranchMaker.Properties.Resources.resources
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\obj\Debug\BranchMaker.csproj.GenerateResource.cache
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\obj\Debug\BranchMaker.csproj.CoreCompileInputs.cache
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\obj\Debug\BranchMaker.exe
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\obj\Debug\BranchMaker.pdb
+C:\Users\Vasil.Kashirski\source\repos\BranchMaker\BranchMaker\obj\Debug\BranchMaker.csproj.AssemblyReference.cache
