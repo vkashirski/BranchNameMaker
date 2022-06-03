@@ -21,32 +21,40 @@ namespace BranchMaker {
 			// Validate Type
 			if (comboBoxType.SelectedItem == null) {
 				MessageBoxResult result = System.Windows.MessageBox.Show("Error - Type not selected.", "Error");
-				textBoxFinal.Clear();
 			}
 
 			// Validate ID
 			else if (string.IsNullOrEmpty(textBoxID.Text.ToString()) || IsNotOnlyDigits(textBoxID.Text.ToString())) {
-				MessageBoxResult result = System.Windows.MessageBox.Show("Error - Invalid ID.", "Error");
-				textBoxFinal.Clear();
+				if (!(comboBoxType.SelectedItem.ToString() == "chore" && string.IsNullOrEmpty(textBoxID.Text.ToString()))){
+					MessageBoxResult result = System.Windows.MessageBox.Show("Error - Invalid ID.", "Error");
+				}
+				else Set();
 			}
 
 			// Validate Description
 			else if (string.IsNullOrEmpty(textBoxDescription.Text.ToString())) {
 				MessageBoxResult result = System.Windows.MessageBox.Show("Error - No description.", "Error");
-				textBoxFinal.Clear();
 			}
 
-			//Exclude invalid characters
+			//Exclude invalid characters and Set
 			else {
-				string type = comboBoxType.SelectedItem.ToString();
-				string id = textBoxID.Text.ToString();
-				string description = ExcludeInvalidCharacters(textBoxDescription.Text.ToString()).ToLower();
+				Set();
+			}
+		}
 
-				string branchName = type + "/" + id + "-" + description;
-				textBoxFinal.Text = branchName;
-				if (branchName.Count() > 140) {
-					MessageBoxResult result = System.Windows.MessageBox.Show("Warning - Branch name might be too long, consider making it shorter.", "Warning");
-				}
+		private void Set() {
+			string type = comboBoxType.SelectedItem.ToString();
+			string id = textBoxID.Text.ToString();
+			string description = ExcludeInvalidCharacters(textBoxDescription.Text.ToString()).ToLower();
+
+			string branchName = !(comboBoxType.SelectedItem.ToString() == "chore" && string.IsNullOrEmpty(textBoxID.Text.ToString()))
+				? type + "/" + id + "-" + description
+				: type + "/" + description;
+
+			textBoxFinal.Text = branchName;
+
+			if (branchName.Count() > 140) {
+				MessageBoxResult result = System.Windows.MessageBox.Show("Warning - Branch name might be too long, consider making it shorter.", "Warning");
 			}
 		}
 
