@@ -51,11 +51,12 @@ namespace BranchMaker {
 				? type + "/" + id + "-" + description
 				: type + "/" + description;
 
-			textBoxFinal.Text = branchName;
-
-			if (branchName.Count() > 140) {
-				MessageBoxResult result = System.Windows.MessageBox.Show("Warning - Branch name might be too long, consider making it shorter.", "Warning");
+			if (branchName.Count() > 100) {
+				branchName = branchName.Substring(0, 100);
+				MessageBoxResult result = System.Windows.MessageBox.Show("Warning - Description too long, deleted characters after the 100 character limit.", "Warning");
 			}
+
+			textBoxFinal.Text = branchName;
 		}
 
 		private string ExcludeInvalidCharacters(string desc) {
